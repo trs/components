@@ -1,21 +1,25 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import {Button, ButtonProps} from './Button';
+import { Icon } from './Icon';
 
 export default {
   title: 'Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  subcomponents: {
+    Icon
+  }
 } as Meta;
 
-const Template: Story<ButtonProps> = ({children, ...args}) => <Button {...args}>{children}</Button>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Hello'
-  // primary: true,
-  // label: 'Button',
-};
+export const Basic: Story<ButtonProps> = ({children, ...args}) =>
+  <Button {...args}>Basic</Button>;
+
+export const Disabled: Story<ButtonProps> = ({children, ...args}) =>
+  <Button disabled {...args}>Disabled</Button>;
+
+export const WithIcon: Story<ButtonProps> = ({children, ...args}) =>
+  <Button {...args}>
+    <Icon />
+    WithIcon
+  </Button>;

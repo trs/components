@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Button } from './Button';
 
 export const Icon = styled.i`
   // resets
@@ -11,4 +12,8 @@ export const Icon = styled.i`
   min-width: 10px;
   min-height: 10px;
   background: red;
+
+  ${Button} & {
+    background-color: blue;
+  }
 `;

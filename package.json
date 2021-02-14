@@ -12,13 +12,10 @@
     "url": "git@github.com:trs/components.git"
   },
   "scripts": {
-    "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "clean": "rimraf dist",
-    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
+    "start": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -67,7 +64,6 @@
     "react-scripts": "4.0.2",
     "react-test-renderer": "^17.0.1",
     "require-context.macro": "^1.2.2",
-    "rimraf": "^3.0.2",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1",
     "webpack-merge": "^5.7.3"
